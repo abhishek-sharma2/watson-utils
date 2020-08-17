@@ -1,4 +1,4 @@
-# WA-Testing-Tool
+# Watson Assistant Utilities
 Scripts that run against Watson Assistant for
   - `KFOLD` K fold cross validation on training set,
   - `BLIND` Evaluating a blind test, and

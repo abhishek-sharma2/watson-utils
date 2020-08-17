@@ -18,11 +18,135 @@ Example for one workspace:
 python3 getAllLogs.py -a your_api_key -w your_workspace_id -l https://gateway.watsonplatform.net/assistant/api -c raw -n 20 -p 500 -o 10000_logs.json -f "response_timestamp>=2019-11-01,response_timestamp<2019-11-21"
 ```
 
-Example for one assistant:
+`NSS Manual Steps`
 ```
-python3 getAllLogs.py -a your_api_key -l https://gateway.watsonplatform.net/assistant/api -c raw -n 20 -p 500 -o 10000_logs.json -f "language::en,response_timestamp>=2019-11-01,response_timestamp<2019-11-21,request.context.system.assistant_id::your_assistant_id"
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_nss.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-11T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_6_1595584671717""
 ```
 
+`Stuck on Standby Manual Steps`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_stuck_on_standby.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-11T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_6_1596651752946""
+```
+
+`Mobile Delivery & Repairs`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_mobile_delivery_repairs.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-11T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_1_1596729155116""
+```
+
+`Mobile Change Address`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_mobile_change_address.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-11T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_4_1595511668790""
+```
+
+`Reschedule Engineer`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_reschedule_engineer.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-11T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_1_1596004460580""
+```
+
+`Mobile Billing`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_34/discovery_dialog_logs_week_34_mobile_billing.json -f "language::en,response_timestamp>="2020-08-14T00:00:00.000Z",response_timestamp<="2020-08-17T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_1681_1587590708431""
+```
+
+`Billing TV, Broadband and Talk`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_34/discovery_dialog_logs_week_34_billing.json -f "language::en,response_timestamp>="2020-08-14T00:00:00.000Z",response_timestamp<="2020-08-17T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_5_1595499742220""
+```
+
+`Sky Mobile ONLY`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_sky_mobile.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-10T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_4_1595064094774""
+```
+
+`Sky Mobile - Account and Billing`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_sky_mobile_account_and_billing.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-10T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_8_1595062745219""
+```
+
+`Sky Mobile - Device Support`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_sky_mobile_device_support.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-10T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_5_1595064191085""
+```
+
+`Sky Mobile - Other Queries`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_sky_mobile_other.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-10T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_7_1587724562121""
+```
+
+`Home Move:`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_home_move.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-11T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_10_1595063242388""
+```
+
+`Broadband:`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_broadband.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-10T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_2_1592209187024""
+```
+
+`TV On Screen Message is Yes:`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_tv_osm.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-10T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_7_1594058592632""
+```
+
+`TV On Screen Message is No:`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_tv_no_osm.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-10T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_4_1592209187024""
+```
+
+`Shop Join Sky:`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_shop.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-10T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_1_1593100478254""
+```
+
+<!-- Shop Join Sky Mobile: -->
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_shop_sky_mobile.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-10T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_4_1589457362364""
+```
+
+<!-- Shop New Phone or Contract: -->
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_shop_phone_or_contract.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-10T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_3_1589457457036""
+```
+
+<!-- Handover: -->
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_handover.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-10T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_7_1587654557592""
+```
+
+<!-- Community: -->
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_community_test.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-10T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited::"node_8_1593168815473""
+```
+
+<!-- Sky ID: -->
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_sky_id.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-10T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_3_1588600305551""
+```
+
+<!-- Vulnerable Customer Check -->
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_vulnerable_customer_check.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-14T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_3_1589563930042""
+```
+
+<!-- NSS Smart Community Deflection -->
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_33/discovery_dialog_logs_week_33_vulnerable_customer_check.json -f "language::en,response_timestamp>="2020-08-07T00:00:00.000Z",response_timestamp<="2020-08-14T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a,response.output.nodes_visited:"node_7_1596813722768""
+```
+
+`Example for Disco Bot NEW`
+```
+python getAllLogs.py -a xn8azGVGosucuJKayLHyjGhy8tcX4galVvhLehfckcX_ -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/week_34/discovery_dialog_logs_week_34_august_14_part_3.json -f "language::en,response_timestamp>="2020-08-14T16:00:00.000Z",response_timestamp<="2020-08-15T00:00:00.000Z",request.context.system.assistant_id::0a8376ef-2e4a-4cef-8112-8a1edf67834a"
+```
+
+`DISCO BOT OLD`
+```
+python getAllLogs.py -a Y_-glNOYF9NWF2rQ38BH5nM-HqMv7baXNQY8pLtZYNn0 -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/discovery_dialog_logs_week_30_part_2.json -f "language::en,response_timestamp>="2020-07-20T00:00:00.000Z",response_timestamp<="2020-07-24T00:00:00.000Z",request.context.system.assistant_id::942cc1a1-38ec-437b-b369-90562d979efa"
+```
+
+`Example for Messaging Bots`
+```
+python getAllLogs.py -a  -l https://api.eu-de.assistant.watson.cloud.ibm.com -c raw -o ../data/discovery_dialog_logs_week_30_July_20.json -f "language::en,response_timestamp>=2020-07-10,response_timestamp<=2020-07-13,workspace_id::"
+```
 The Watson Assistant team has put out a similar script at https://github.com/watson-developer-cloud/community/blob/master/watson-assistant/export_logs.py
 
 # extractConversations.py
@@ -32,14 +156,19 @@ The unique conversation identifier is provided with `-c`.  Note that if a single
 
 Custom fields are specified with `-f`.  You can specifiy multiple custom fields as a comma-separated list, for example `-f response.context.STT_CONFIDENCE,response.context.action`.
 
-Example for text-based assistants:
+`Example for Disco:`
 ```
-python3 extractConversations.py -i 10000_logs.json -o 10000_logs.csv -c "response.context.conversation_id"
+python extractConversations.py -i ../data/week_34/discovery_dialog_logs_week_34_mobile_billing.json -o ../data/week_34/discovery_dialog_logs_week_34_mobile_billing.csv -c "response.context.metadata.user_id" -f "response.context.wds_results,response.context.article_unhelpful,response.context.discovery_search_counter,response.context.communityLinkSent,response.input,response.output"
+```
+
+`Example for Disco with IP addresses:`
+```
+python extractConversations.py -i ../data/discovery_dialog_logs_demo.json -o ../data/discovery_dialog_logs_demo_ip_address_2.csv -c "response.context.metadata.user_id" -f "response.context.wds_results,response.context.article_unhelpful,response.context.discovery_search_counter,response.context.communityLinkSent,response.context.integrations.chat.browser_info,response.input,response.output" 
 ```
 
 Example for voice-based assistants using IBM Voice Gateway:
 ```
-python3 extractConversations.py -i 10000_logs.json -o 10000_logs.csv -c "request.context.vgwSessionID"
+python extractConversations.py -i ..data/discovery_dialog_logs_week_23.json -o ..data/discovery_dialog_logs_week_23.csv -c "request.context.vgwSessionID"
 ```
 
 # ConversationAnalysisRecipes.ipynb

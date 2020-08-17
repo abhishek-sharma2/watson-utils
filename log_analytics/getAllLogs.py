@@ -7,8 +7,8 @@ import datetime
 import time
 
 DEFAULT_WCS_VERSION='2018-09-20'
-DEFAULT_PAGE_SIZE=500
-DEFAULT_NUMBER_OF_PAGES=20
+DEFAULT_PAGE_SIZE=10000
+DEFAULT_NUMBER_OF_PAGES=500
 
 def getAssistant(iam_apikey, url, version=DEFAULT_WCS_VERSION):
     '''Retrieve Watson Assistant SDK object'''
@@ -119,7 +119,7 @@ def writeOut(file, message):
 
 def create_parser():
     parser = ArgumentParser(description='Extracts Watson Assistant logs from a given workspace')
-    parser.add_argument('-c', '--output_columns', type=str, help='Which columns you want in output, either "utterance", "raw", or "all" (default is "raw")', default='raw')
+    parser.add_argument('-c', '--output_columns', type=str, help='Which columns you want in output, either "utterance", "raw", or "all" (default is "raw")', default='utterance')
     parser.add_argument('-o', '--output_file', type=str, help='Filename to write results to')
     parser.add_argument('-w', '--workspace_id', type=str, help='Workspace identifier')
     parser.add_argument('-a', '--iam_apikey', type=str, required=True, help='Assistant service iam api key')

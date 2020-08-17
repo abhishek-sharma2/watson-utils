@@ -119,9 +119,10 @@ def extractConversationData(logs, conversation_id_key='response.context.conversa
     
     df['request_timestamp']  = pd.to_datetime(df['request_timestamp'])
     df['response_timestamp'] = pd.to_datetime(df['response_timestamp'])
-    df['intent_confidence'] = pd.to_numeric(df["intent_confidence"], errors='coerce')
-    df['intent_confidence'] = df['intent_confidence'].fillna(0.0)
-    df[df['intent_confidence']=='']=0.0
+    if 'intent_confidence' in df:
+        df['intent_confidence'] = pd.to_numeric(df["intent_confidence"], errors='coerce')
+        df['intent_confidence'] = df['intent_confidence'].fillna(0.0)
+        df[df['intent_confidence']=='']=0.0
 
     # Lastly sort by conversation ID, and then request, so that the logs become readable. 
     df = df.sort_values([primarySortField, 'request_timestamp'], ascending=[True, True]).reset_index(drop=True)
